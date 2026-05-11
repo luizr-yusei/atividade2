@@ -1,0 +1,237 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+  width:100%;
+  background:#d48fb4;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+}
+
+.logo{
+  color:#000;
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* SEARCH */
+
+.search-box{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.search-box input{
+  width:260px;
+  height:42px;
+  border:none;
+  outline:none;
+  border-radius:25px;
+  background:#3a2330;
+  color:#fff;
+  text-align:center;
+  font-size:16px;
+}
+
+/* PAGES */
+
+.page{
+  display:none;
+  width:100%;
+  min-height:100vh;
+  padding-top:20px;
+  padding-bottom:120px;
+  text-align:center;
+}
+
+.page.active{
+  display:block;
+}
+
+/* CARDS */
+
+.card{
+  background:#c38fb2;
+  color:#000;
+  width:260px;
+  padding:14px;
+  margin:14px auto;
+  border-radius:22px;
+  transition:.3s;
+}
+
+.card:hover{
+  background:#e2a9d1;
+  transform:scale(1.03);
+}
+
+.titulo{
+  font-size:16px;
+  font-weight:bold;
+}
+
+.linguagem{
+  cursor:pointer;
+}
+
+/* BOTÃO VOLTAR */
+
+.voltar{
+  margin-bottom:20px;
+}
+
+/* FORM */
+
+form{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+label{
+  margin-top:14px;
+  margin-bottom:6px;
+  font-size:16px;
+}
+
+form input,
+form select{
+  width:260px;
+  height:42px;
+  border:none;
+  outline:none;
+  border-radius:15px;
+  text-align:center;
+  font-size:16px;
+}
+
+/* BOTÕES */
+
+button{
+  border:none;
+  background:#c38fb2;
+  padding:14px 20px;
+  border-radius:22px;
+  cursor:pointer;
+  transition:.3s;
+  font-size:16px;
+}
+
+button:hover{
+  background:#e2a9d1;
+  transform:scale(1.05);
+}
+
+/* RESULTADO */
+
+#resultado{
+  width:260px;
+  margin:20px auto;
+  padding:14px;
+  border-radius:15px;
+  font-size:17px;
+}
+
+.baixo{
+  background:#ff4d4d;
+}
+
+.ok{
+  background:#4caf50;
+}
+
+/* LISTAS */
+
+ul{
+  list-style:none;
+  margin-top:25px;
+}
+
+li{
+  width:340px;
+  margin:15px auto;
+  padding:15px;
+  border-radius:20px;
+  background:#c38fb2;
+  color:#000;
+  text-align:left;
+}
+
+.projetoBtns{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+.projetoBtns button{
+  padding:10px;
+  font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+  position:fixed;
+  bottom:10px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:700px){
+
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .search-box input{
+    width:220px;
+  }
+
+  .card{
+    width:230px;
+  }
+
+  form input,
+  form select,
+  #resultado{
+    width:230px;
+  }
+
+  footer{
+    gap:10px;
+    flex-wrap:wrap;
+    padding:0 10px;
+  }
+
+  button{
+    font-size:13px;
+    padding:12px 14px;
+  }
+
+  li{
+    width:250px;
+  }
+
+}
