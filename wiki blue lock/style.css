@@ -1,0 +1,384 @@
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:black;
+    color:white;
+    min-height:100vh;
+}
+
+/* HEADER */
+
+header{
+    background:#020617;
+    padding:25px;
+    text-align:center;
+    border-bottom:3px solid #00aeff;
+    box-shadow:0 0 20px rgba(0,174,255,.3);
+}
+
+header h1{
+    color:#00aeff;
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+/* PÁGINA INICIAL */
+
+.inicio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:85vh;
+    padding:20px;
+}
+
+.conteudo{
+    background:#07111f;
+    padding:50px;
+    max-width:850px;
+    border-radius:25px;
+    text-align:center;
+    border:2px solid #00aeff;
+    box-shadow:
+    0 0 20px rgba(0,174,255,.3),
+    0 0 40px rgba(0,174,255,.2);
+}
+
+.conteudo h2{
+    color:#00aeff;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.conteudo p{
+    font-size:21px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* BOTÕES */
+
+button{
+    background:#0066ff;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:12px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    border:2px solid #7dd3fc;
+    box-shadow:
+    0 0 10px #7dd3fc,
+    0 0 20px #7dd3fc,
+    0 0 40px #38bdf8;
+    transform:scale(1.05);
+}
+
+/* TIMES */
+
+.times{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    padding:40px 20px;
+}
+
+.card{
+    width:320px;
+    background:#07111f;
+    border-radius:20px;
+    overflow:hidden;
+    border:2px solid #0066ff;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 0 15px rgba(0,174,255,.5);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.card button{
+    width:100%;
+    border-radius:0;
+}
+
+/* PERSONAGENS */
+
+#resultado{
+    padding:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.personagem{
+    width:300px;
+    background:#07111f;
+    padding:20px;
+    border-radius:15px;
+    border:2px solid #00aeff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.personagem:hover{
+    transform:scale(1.05);
+    box-shadow:
+    0 0 10px #00aeff,
+    0 0 25px #00aeff;
+}
+
+.personagem img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.personagem h3{
+    color:#00aeff;
+    margin-bottom:10px;
+}
+
+.personagem p{
+    line-height:1.5;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.88);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    z-index:9999;
+}
+
+.modal-card{
+
+    width:100%;
+    max-width:900px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:#07111f;
+
+    border:2px solid #00aeff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    position:relative;
+
+    animation:abrirModal .35s ease;
+}
+
+@keyframes abrirModal{
+
+    from{
+        opacity:0;
+        transform:scale(.85);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.modal-card img{
+
+    width:100%;
+
+    max-height:500px;
+
+    object-fit:contain;
+
+    background:black;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+}
+
+.modal-card h2{
+
+    color:#00aeff;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.modal-card p{
+
+    line-height:1.8;
+    margin-bottom:12px;
+}
+
+/* BOTÃO FECHAR */
+
+.fechar{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    width:42px;
+    height:42px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* INFORMAÇÕES */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:12px;
+
+    margin:20px 0;
+}
+
+.info-grid p{
+
+    background:#020617;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(0,174,255,.3);
+}
+
+.info-grid strong{
+    color:#00aeff;
+}
+
+/* EXTRAS */
+
+.extra{
+
+    margin-top:20px;
+
+    background:#020617;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:1px solid #00aeff;
+}
+
+.extra h3{
+
+    color:#00aeff;
+
+    margin-bottom:15px;
+}
+
+/* UTILIDADES */
+
+.escondido{
+    display:none;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00aeff;
+    border-radius:20px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:32px;
+    }
+
+    .conteudo{
+        padding:30px;
+    }
+
+    .conteudo h2{
+        font-size:28px;
+    }
+
+    .conteudo p{
+        font-size:18px;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+
+    .personagem{
+        width:100%;
+        max-width:350px;
+    }
+
+    .modal-card{
+        padding:20px;
+    }
+
+    .modal-card h2{
+        font-size:28px;
+    }
+}

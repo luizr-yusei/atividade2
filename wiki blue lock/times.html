@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Lock Times</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+
+        <h1>BLUE LOCK</h1>
+
+    </header>
+
+    <!-- TIMES -->
+
+    <section class="times">
+
+        <div class="card">
+
+            <img src="/imagem/simbolo.jpg" alt="Projeto Blue Lock">
+
+            <button onclick="mostrarBlueLock()">
+                Projeto Blue Lock
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="/imagem/bastard.jpg" alt="Bastard München">
+
+            <button onclick="mostrarBastardMunchen()">
+                Bastard München
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="/imagem/pxg.png" alt="PXG">
+
+            <button onclick="mostrarPXGParisXGen()">
+                PXG - Paris X Gen
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="/imagem/ubers.jpg" alt="Ubers">
+
+            <button onclick="mostrarUbers()">
+                Ubers
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="/imagem/manshine.jpg" alt="Manshine City">
+
+            <button onclick="mostrarManshineCity()">
+                Manshine City
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <img src="/imagem/fc.jpg" alt="FC Barcha">
+
+            <button onclick="mostrarFCBarcha()">
+                FC Barcha
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PERSONAGENS -->
+
+    <section id="resultado"></section>
+
+    <!-- MODAL -->
+
+    <div id="modal" class="modal escondido">
+
+        <div class="modal-card">
+
+            <button class="fechar" onclick="fecharModal()">
+                ✖
+            </button>
+
+            <img
+                id="detalheImagem"
+                src=""
+                alt="Personagem">
+
+            <h2 id="detalheNome"></h2>
+
+            <p id="detalheDescricao"></p>
+
+            <div class="info-grid">
+
+                <p>
+                    <strong>Apelido:</strong>
+                    <span id="detalheApelido"></span>
+                </p>
+
+                <p>
+                    <strong>Idade:</strong>
+                    <span id="detalheIdade"></span>
+                </p>
+
+                <p>
+                    <strong>Altura:</strong>
+                    <span id="detalheAltura"></span>
+                </p>
+
+                <p>
+                    <strong>Time:</strong>
+                    <span id="detalheTime"></span>
+                </p>
+
+                <p>
+                    <strong>Arma:</strong>
+                    <span id="detalheArma"></span>
+                </p>
+
+            </div>
+
+            <button onclick="mostrarExtra()">
+                Informações Extras
+            </button>
+
+            <div
+                id="extraInfo"
+                class="extra escondido">
+
+                <h3>
+                    Informações Extras
+                </h3>
+
+                <p id="detalheExtra"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
